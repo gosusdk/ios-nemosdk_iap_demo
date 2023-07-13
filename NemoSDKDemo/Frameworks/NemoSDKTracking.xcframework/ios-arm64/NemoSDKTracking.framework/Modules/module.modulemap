@@ -1,0 +1,11 @@
+framework module NemoSDKTracking {
+  umbrella header "NemoSDKTracking.h"
+
+  export *
+  module * { export * }
+}
+
+module NemoSDKTracking.Swift {
+  header "NemoSDKTracking-Swift.h"
+  requires objc
+}

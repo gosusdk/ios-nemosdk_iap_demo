@@ -1,0 +1,59 @@
+ALERT = Invalid!
+
+SERVERDATAINIT:-1 = Sorry, Server is busy
+SERVERDATAINIT:-2 = Sorry, Server is busy(product list is empty).
+
+IAPDATAINIT:-1 = ProductID is nil, please check your data.
+IAPDATAINIT:-2 = ProductID is invalid, please check your data.
+IAPDATAINIT:-3 = AppleSecret is nil, please check your data.
+IAPDATAINIT:-4 = OrderID is nil, please check your data.
+IAPDATAINIT:-5 = OrderInfo is nil, please check your data.
+IAPDATAINIT:-6 = Amount is nil, please check your data.
+IAPDATAINIT:-7 = Server is nil, please check your data.
+IAPDATAINIT:-8 = UserName is nil or incorrect, please check your data.
+APPLEINIT:100 = Transaction was cancelled.
+APPLEINIT:101 = Can't connect to iTunes Store, please try again.
+APPLEINIT:102 = Product ID invalid or not exist on AppleStore.
+APPLEINIT:103 = Can't make payment on AppStore, please try again.
+
+APPIAPINIT:-2 = Payment is being processed
+
+SVIAPVERIFY:204 = Payment invaild, please contact customer service for assistance.
+APPIAPVERIFY:-99 = App error, please try again (-99)
+APPIAPVERIFY:-98 = App error, please try again (-98)
+
+BILLINGPURCHASE:-98 = In-app error connect.
+BILLINGPURCHASE:-00 = Transaction error.
+BILLINGPURCHASE:-1 = Error, SERVICE DISCONNECTED on your device.
+BILLINGPURCHASE:-2 = Error, FEATURE_NOT_SUPPORTED on your device.
+BILLINGPURCHASE:1 = You have cancelled the transaction.
+BILLINGPURCHASE:2 = Error, SERVICE UNAVAILABLE on your device.
+BILLINGPURCHASE:3 = Error, BILLING_UNAVAILABLE on your device.
+BILLINGPURCHASE:4 = Error, ITEM_UNAVAILABLE on your product.
+BILLINGPURCHASE:5 = Error, DEVELOPER_ERROR.
+BILLINGPURCHASE:6 = Error, ProductID invalid on Google Play.
+BILLINGPURCHASE:7 = Error, ITEM_ALREADY_OWNED on your product.
+BILLINGPURCHASE:8 = Error, ITEM_NOT_OWNED on your product.
+
+
+BILLINGHANDLE:2 = Transaction is pending.
+BILLINGHANDLE:ANY = Can't payment with Google Play.
+
+APPIAPINIT:-1 = Error iapDataEntity:
+SVIAPINIT200 =  Payment initialization successful
+SVIAPINIT201 =  Account has been banned
+SVIAPINIT202 =  Invalid signature
+SVIAPINIT203 =  Amount over the limit allowed to pay
+SVIAPINIT500 =  System error
+SVIAPINIT999 =  Login has expired, please login to continue
+SVIAPINIT204 =  CurrencyUnit
+
+APPIAPVERIFY:-1 = Error Finalize:
+APPIAPPURCHASE:-1 = SKU is empty
+SVIAPVERIFY:200 = Congratulation, You have paid success.
+SVIAPVERIFY:201 = Transaction does not exist
+SVIAPVERIFY:202 = The transaction has been processed
+SVIAPVERIFY:203 = Transaction timeout
+SVIAPVERIFY:204 = Transaction verification failed, please contact customer service for assistance. (204)
+SVIAPVERIFY:500 = Transaction verification failed, please contact customer service for assistance. (500)
+SVIAPVERIFY:999 = Login has expired, please login to continue

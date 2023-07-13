@@ -1,0 +1,58 @@
+ALERTCOMMON = Thông báo!
+
+SERVERDATAINIT:-1 = Sorry, Server is busy
+SERVERDATAINIT:-2 = Sorry, Server is busy(product list is empty).
+
+IAPDATAINIT:-1 = ProductID is nil, please check your data.
+IAPDATAINIT:-2 = ProductID is invalid, please check your data.
+IAPDATAINIT:-3 = AppleSecret is nil, please check your data.
+IAPDATAINIT:-4 = OrderID is nil, please check your data.
+IAPDATAINIT:-5 = OrderInfo is nil, please check your data.
+IAPDATAINIT:-6 = Amount is nil, please check your data.
+IAPDATAINIT:-7 = Server is nil, please check your data.
+IAPDATAINIT:-8 = UserName is nil or incorrect, please check your data.
+APPLEINIT:100 = Giao dịch đã được hủy
+APPLEINIT:101 = Không thể kết nối đến iTunes Store.
+APPLEINIT:102 = Product ID không hợp lệ hoặc không tồn tại trên Apple Store
+APPLEINIT:103 = Không thể tiến hành thanh toán qua AppStore, vui lòng thử lại sau.
+
+APPIAPINIT:-2 = Đang xử lý giao dịch
+
+SVIAPVERIFY:204 = Xử lý thanh toán thất bại, vui lòng liên hệ nhân viên CSKH để được hỗ trợ
+APPIAPVERIFY:-99 = Ứng dụng gặp sự cố, vui lòng thử lại (-99)
+APPIAPVERIFY:-98 = Ứng dụng gặp sự cố, vui lòng thử lại (-98)
+
+BILLINGPURCHASE:-98 = In-app error connect.
+BILLINGPURCHASE:-00 = Giao dịch lỗi.
+BILLINGPURCHASE:-1 = Lỗi SERVICE DISCONNECTED, không kết nối đến dịch vụ trên Google Play.
+BILLINGPURCHASE:-2 = Lỗi FEATURE_NOT_SUPPORTED, tính năng không được hỗ trợ.
+BILLINGPURCHASE:1 = Bạn đã huỷ giao dịch.
+BILLINGPURCHASE:2 = Lỗi, không tìm thấy dịch vụ trên Google Play.
+BILLINGPURCHASE:3 = Lỗi BILLING_UNAVAILABLE, yêu cầu không được hỗ trợ.
+BILLINGPURCHASE:4 = Lỗi ITEM_UNAVAILABLE, không tìm thấy item trên Google Play.
+BILLINGPURCHASE:5 = Lỗi DEVELOPER_ERROR, tham số không được hỗ trợ.
+BILLINGPURCHASE:6 = Lỗi, không tìm thấy ProductID trên Google Play.
+BILLINGPURCHASE:7 = Lỗi ITEM_ALREADY_OWNED, item đã được mua.
+BILLINGPURCHASE:8 = Lỗi ITEM_NOT_OWNED, item không thuộc quyền sở hữu của bạn.
+
+BILLINGHANDLE:2 = Giao dịch đang chờ được xử lý.
+BILLINGHANDLE:ANY = Không thể thanh toán với Google Play.
+
+APPIAPINIT:-1 = Error iapDataEntity:
+SVIAPINIT200 =  OK
+SVIAPINIT201 =  Cấm thanh toán với account này
+SVIAPINIT202 =  Chứ ký không hợp lệ
+SVIAPINIT203 =  Vượt quá số tiền tối đa cho phép thanh toán
+SVIAPINIT500 =  Lỗi bất thường phía Server
+SVIAPINIT999 =  Phiên đăng nhập hết hạn, vui lòng đăng nhập để tiếp tục
+SVIAPINIT204 =  CurrencyUnit
+
+APPIAPVERIFY:-1 = Error Finalize:
+APPIAPPURCHASE:-1 = SKU is empty
+SVIAPVERIFY:200 = Chúc mừng bạn đã thanh toán thành công.
+SVIAPVERIFY:201 = Giao dịch không tồn tại
+SVIAPVERIFY:202 = Giao dịch đã được xử lý
+SVIAPVERIFY:203 = Giao dịch đã hết hạn, vui lòng thử lại hoặc liên hệ nhân viên CSKH để được hỗ trợ
+SVIAPVERIFY:204 = Xác minh thanh toán thất bại, vui lòng liện hệ nhân viên CSKH để được hỗ trợ (204)
+SVIAPVERIFY:500 = Xác minh thanh toán thất bại, vui lòng liện hệ nhân viên CSKH để được hỗ trợ (500)
+SVIAPVERIFY:999 = Phiên đăng nhập hết hạn, vui lòng đăng nhập để tiếp tục

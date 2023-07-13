@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE71E7572A5E5A79000C22DC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E7552A5E5A79000C22DC /* Accelerate.framework */; };
+		CE71E7592A5E5A7E000C22DC /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E7582A5E5A7E000C22DC /* AuthenticationServices.framework */; };
+		CE71E75B2A5E5AF1000C22DC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E75A2A5E5AF1000C22DC /* MobileCoreServices.framework */; };
+		CE71E7CF2A5F9558000C22DC /* en.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE71E7CD2A5F9558000C22DC /* en.txt */; };
+		CE71E7D02A5F9558000C22DC /* vi.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE71E7CE2A5F9558000C22DC /* vi.txt */; };
+		CE71E80C2A5FBDBE000C22DC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71E80B2A5FBDBE000C22DC /* File.swift */; };
+		CE71E82F2A5FD64B000C22DC /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8152A5FD64B000C22DC /* Protobuf.framework */; };
+		CE71E8302A5FD64B000C22DC /* uv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8162A5FD64B000C22DC /* uv.framework */; };
+		CE71E8312A5FD64B000C22DC /* GRPCClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8172A5FD64B000C22DC /* GRPCClient.framework */; };
+		CE71E8322A5FD64B000C22DC /* ProtoRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8182A5FD64B000C22DC /* ProtoRPC.framework */; };
+		CE71E8332A5FD64B000C22DC /* grpc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8192A5FD64B000C22DC /* grpc.framework */; };
+		CE71E8342A5FD64B000C22DC /* openssl_grpc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E81A2A5FD64B000C22DC /* openssl_grpc.framework */; };
+		CE71E8352A5FD64B000C22DC /* absl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E81B2A5FD64B000C22DC /* absl.framework */; };
+		CE71E8362A5FD64B000C22DC /* RxLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E81C2A5FD64B000C22DC /* RxLibrary.framework */; };
+		CE71E8372A5FD64B000C22DC /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8212A5FD64B000C22DC /* nanopb.xcframework */; };
+		CE71E8382A5FD64B000C22DC /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8222A5FD64B000C22DC /* GoogleAppMeasurementIdentitySupport.xcframework */; };
+		CE71E8392A5FD64B000C22DC /* FirebaseAnalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8232A5FD64B000C22DC /* FirebaseAnalytics.xcframework */; };
+		CE71E83A2A5FD64B000C22DC /* FirebaseAnalyticsSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8242A5FD64B000C22DC /* FirebaseAnalyticsSwift.xcframework */; };
+		CE71E83B2A5FD64B000C22DC /* FirebaseInstallations.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8252A5FD64B000C22DC /* FirebaseInstallations.xcframework */; };
+		CE71E83C2A5FD64B000C22DC /* FBLPromises.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8262A5FD64B000C22DC /* FBLPromises.xcframework */; };
+		CE71E83D2A5FD64B000C22DC /* FirebaseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8272A5FD64B000C22DC /* FirebaseCore.xcframework */; };
+		CE71E83E2A5FD64B000C22DC /* FirebaseCoreInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8282A5FD64B000C22DC /* FirebaseCoreInternal.xcframework */; };
+		CE71E83F2A5FD64B000C22DC /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8292A5FD64B000C22DC /* GoogleAppMeasurement.xcframework */; };
+		CE71E8402A5FD64B000C22DC /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E82A2A5FD64B000C22DC /* GoogleUtilities.xcframework */; };
+		CE71E8412A5FD64B000C22DC /* FirebaseMessaging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E82C2A5FD64B000C22DC /* FirebaseMessaging.xcframework */; };
+		CE71E8422A5FD64B000C22DC /* GoogleDataTransport.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E82D2A5FD64B000C22DC /* GoogleDataTransport.xcframework */; };
+		CE71E8432A5FD64B000C22DC /* AppsFlyerLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E82E2A5FD64B000C22DC /* AppsFlyerLib.framework */; };
+		CE71E84B2A5FD6DE000C22DC /* NemoSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8482A5FD6DD000C22DC /* NemoSDK.xcframework */; };
+		CE71E84C2A5FD6DE000C22DC /* AppAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E8492A5FD6DD000C22DC /* AppAuth.xcframework */; };
+		CE71E84D2A5FD6DE000C22DC /* NemoSDKTracking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71E84A2A5FD6DE000C22DC /* NemoSDKTracking.xcframework */; };
+		CE71E84F2A5FD801000C22DC /* Protobuf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E8152A5FD64B000C22DC /* Protobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE71E8502A5FD801000C22DC /* uv.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E8162A5FD64B000C22DC /* uv.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE71E8512A5FD801000C22DC /* GRPCClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E8172A5FD64B000C22DC /* GRPCClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE71E8522A5FD801000C22DC /* ProtoRPC.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E8182A5FD64B000C22DC /* ProtoRPC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE71E8532A5FD801000C22DC /* grpc.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E8192A5FD64B000C22DC /* grpc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE71E8542A5FD801000C22DC /* openssl_grpc.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E81A2A5FD64B000C22DC /* openssl_grpc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE71E8552A5FD801000C22DC /* absl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E81B2A5FD64B000C22DC /* absl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE71E8562A5FD802000C22DC /* RxLibrary.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE71E81C2A5FD64B000C22DC /* RxLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE8685712A5E525B0005D913 /* ap_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8685692A5E525B0005D913 /* ap_logo.png */; };
+		CE8685722A5E525B0005D913 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE86856A2A5E525B0005D913 /* bg.jpg */; };
+		CE8685732A5E525B0005D913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE86856B2A5E525B0005D913 /* GoogleService-Info.plist */; };
+		CEAAE9CF2A5E49FB00F84535 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAE9CE2A5E49FB00F84535 /* AppDelegate.m */; };
+		CEAAE9D22A5E49FB00F84535 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAE9D12A5E49FB00F84535 /* SceneDelegate.m */; };
+		CEAAE9D52A5E49FB00F84535 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAE9D42A5E49FB00F84535 /* ViewController.m */; };
+		CEAAE9D82A5E49FB00F84535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAE9D62A5E49FB00F84535 /* Main.storyboard */; };
+		CEAAE9DA2A5E49FC00F84535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAAE9D92A5E49FC00F84535 /* Assets.xcassets */; };
+		CEAAE9DD2A5E49FC00F84535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAE9DB2A5E49FC00F84535 /* LaunchScreen.storyboard */; };
+		CEAAE9E02A5E49FC00F84535 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAE9DF2A5E49FC00F84535 /* main.m */; };
+		CEAAEAF02A5E4B1300F84535 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEAED2A5E4B1300F84535 /* MainViewController.xib */; };
+		CEAAEAF12A5E4B1300F84535 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEAEE2A5E4B1300F84535 /* MainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE71E84E2A5FD7F6000C22DC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE71E84F2A5FD801000C22DC /* Protobuf.framework in CopyFiles */,
+				CE71E8502A5FD801000C22DC /* uv.framework in CopyFiles */,
+				CE71E8512A5FD801000C22DC /* GRPCClient.framework in CopyFiles */,
+				CE71E8522A5FD801000C22DC /* ProtoRPC.framework in CopyFiles */,
+				CE71E8532A5FD801000C22DC /* grpc.framework in CopyFiles */,
+				CE71E8542A5FD801000C22DC /* openssl_grpc.framework in CopyFiles */,
+				CE71E8552A5FD801000C22DC /* absl.framework in CopyFiles */,
+				CE71E8562A5FD802000C22DC /* RxLibrary.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAAEB112A5E508000F84535 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE71E7552A5E5A79000C22DC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		CE71E7582A5E5A7E000C22DC /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		CE71E75A2A5E5AF1000C22DC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CE71E7CD2A5F9558000C22DC /* en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.txt; sourceTree = "<group>"; };
+		CE71E7CE2A5F9558000C22DC /* vi.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vi.txt; sourceTree = "<group>"; };
+		CE71E80A2A5FBDBD000C22DC /* NemoSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NemoSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE71E80B2A5FBDBE000C22DC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		CE71E8152A5FD64B000C22DC /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
+		CE71E8162A5FD64B000C22DC /* uv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = uv.framework; sourceTree = "<group>"; };
+		CE71E8172A5FD64B000C22DC /* GRPCClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GRPCClient.framework; sourceTree = "<group>"; };
+		CE71E8182A5FD64B000C22DC /* ProtoRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ProtoRPC.framework; sourceTree = "<group>"; };
+		CE71E8192A5FD64B000C22DC /* grpc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = grpc.framework; sourceTree = "<group>"; };
+		CE71E81A2A5FD64B000C22DC /* openssl_grpc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = "<group>"; };
+		CE71E81B2A5FD64B000C22DC /* absl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = absl.framework; sourceTree = "<group>"; };
+		CE71E81C2A5FD64B000C22DC /* RxLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxLibrary.framework; sourceTree = "<group>"; };
+		CE71E81F2A5FD64B000C22DC /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		CE71E8212A5FD64B000C22DC /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = nanopb.xcframework; sourceTree = "<group>"; };
+		CE71E8222A5FD64B000C22DC /* GoogleAppMeasurementIdentitySupport.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleAppMeasurementIdentitySupport.xcframework; sourceTree = "<group>"; };
+		CE71E8232A5FD64B000C22DC /* FirebaseAnalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseAnalytics.xcframework; sourceTree = "<group>"; };
+		CE71E8242A5FD64B000C22DC /* FirebaseAnalyticsSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseAnalyticsSwift.xcframework; sourceTree = "<group>"; };
+		CE71E8252A5FD64B000C22DC /* FirebaseInstallations.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseInstallations.xcframework; sourceTree = "<group>"; };
+		CE71E8262A5FD64B000C22DC /* FBLPromises.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FBLPromises.xcframework; sourceTree = "<group>"; };
+		CE71E8272A5FD64B000C22DC /* FirebaseCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseCore.xcframework; sourceTree = "<group>"; };
+		CE71E8282A5FD64B000C22DC /* FirebaseCoreInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseCoreInternal.xcframework; sourceTree = "<group>"; };
+		CE71E8292A5FD64B000C22DC /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleAppMeasurement.xcframework; sourceTree = "<group>"; };
+		CE71E82A2A5FD64B000C22DC /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
+		CE71E82C2A5FD64B000C22DC /* FirebaseMessaging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseMessaging.xcframework; sourceTree = "<group>"; };
+		CE71E82D2A5FD64B000C22DC /* GoogleDataTransport.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleDataTransport.xcframework; sourceTree = "<group>"; };
+		CE71E82E2A5FD64B000C22DC /* AppsFlyerLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppsFlyerLib.framework; sourceTree = "<group>"; };
+		CE71E8482A5FD6DD000C22DC /* NemoSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NemoSDK.xcframework; sourceTree = "<group>"; };
+		CE71E8492A5FD6DD000C22DC /* AppAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AppAuth.xcframework; sourceTree = "<group>"; };
+		CE71E84A2A5FD6DE000C22DC /* NemoSDKTracking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NemoSDKTracking.xcframework; sourceTree = "<group>"; };
+		CE8685692A5E525B0005D913 /* ap_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ap_logo.png; sourceTree = "<group>"; };
+		CE86856A2A5E525B0005D913 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		CE86856B2A5E525B0005D913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEAAE9CA2A5E49FB00F84535 /* NemoSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NemoSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAAE9CD2A5E49FB00F84535 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEAAE9CE2A5E49FB00F84535 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEAAE9D02A5E49FB00F84535 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		CEAAE9D12A5E49FB00F84535 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		CEAAE9D32A5E49FB00F84535 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CEAAE9D42A5E49FB00F84535 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEAAE9D72A5E49FB00F84535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEAAE9D92A5E49FC00F84535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEAAE9DC2A5E49FC00F84535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEAAE9DE2A5E49FC00F84535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAAE9DF2A5E49FC00F84535 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEAAEAED2A5E4B1300F84535 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CEAAEAEE2A5E4B1300F84535 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CEAAEAEF2A5E4B1300F84535 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEAAE9C72A5E49FB00F84535 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE71E8362A5FD64B000C22DC /* RxLibrary.framework in Frameworks */,
+				CE71E8322A5FD64B000C22DC /* ProtoRPC.framework in Frameworks */,
+				CE71E8402A5FD64B000C22DC /* GoogleUtilities.xcframework in Frameworks */,
+				CE71E83C2A5FD64B000C22DC /* FBLPromises.xcframework in Frameworks */,
+				CE71E84D2A5FD6DE000C22DC /* NemoSDKTracking.xcframework in Frameworks */,
+				CE71E8422A5FD64B000C22DC /* GoogleDataTransport.xcframework in Frameworks */,
+				CE71E75B2A5E5AF1000C22DC /* MobileCoreServices.framework in Frameworks */,
+				CE71E8372A5FD64B000C22DC /* nanopb.xcframework in Frameworks */,
+				CE71E8432A5FD64B000C22DC /* AppsFlyerLib.framework in Frameworks */,
+				CE71E8312A5FD64B000C22DC /* GRPCClient.framework in Frameworks */,
+				CE71E83F2A5FD64B000C22DC /* GoogleAppMeasurement.xcframework in Frameworks */,
+				CE71E7592A5E5A7E000C22DC /* AuthenticationServices.framework in Frameworks */,
+				CE71E83A2A5FD64B000C22DC /* FirebaseAnalyticsSwift.xcframework in Frameworks */,
+				CE71E7572A5E5A79000C22DC /* Accelerate.framework in Frameworks */,
+				CE71E84C2A5FD6DE000C22DC /* AppAuth.xcframework in Frameworks */,
+				CE71E82F2A5FD64B000C22DC /* Protobuf.framework in Frameworks */,
+				CE71E8382A5FD64B000C22DC /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */,
+				CE71E84B2A5FD6DE000C22DC /* NemoSDK.xcframework in Frameworks */,
+				CE71E83B2A5FD64B000C22DC /* FirebaseInstallations.xcframework in Frameworks */,
+				CE71E8332A5FD64B000C22DC /* grpc.framework in Frameworks */,
+				CE71E83D2A5FD64B000C22DC /* FirebaseCore.xcframework in Frameworks */,
+				CE71E83E2A5FD64B000C22DC /* FirebaseCoreInternal.xcframework in Frameworks */,
+				CE71E8412A5FD64B000C22DC /* FirebaseMessaging.xcframework in Frameworks */,
+				CE71E8342A5FD64B000C22DC /* openssl_grpc.framework in Frameworks */,
+				CE71E8392A5FD64B000C22DC /* FirebaseAnalytics.xcframework in Frameworks */,
+				CE71E8352A5FD64B000C22DC /* absl.framework in Frameworks */,
+				CE71E8302A5FD64B000C22DC /* uv.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE71E7CC2A5F9558000C22DC /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E7CD2A5F9558000C22DC /* en.txt */,
+				CE71E7CE2A5F9558000C22DC /* vi.txt */,
+			);
+			name = Language;
+			path = NemoSDKDemo/Language;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE71E7D22A5FBB28000C22DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E8492A5FD6DD000C22DC /* AppAuth.xcframework */,
+				CE71E8482A5FD6DD000C22DC /* NemoSDK.xcframework */,
+				CE71E84A2A5FD6DE000C22DC /* NemoSDKTracking.xcframework */,
+				CE71E8142A5FD64B000C22DC /* GrpcFramework */,
+				CE71E81D2A5FD64B000C22DC /* Tracking */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE71E8142A5FD64B000C22DC /* GrpcFramework */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E8152A5FD64B000C22DC /* Protobuf.framework */,
+				CE71E8162A5FD64B000C22DC /* uv.framework */,
+				CE71E8172A5FD64B000C22DC /* GRPCClient.framework */,
+				CE71E8182A5FD64B000C22DC /* ProtoRPC.framework */,
+				CE71E8192A5FD64B000C22DC /* grpc.framework */,
+				CE71E81A2A5FD64B000C22DC /* openssl_grpc.framework */,
+				CE71E81B2A5FD64B000C22DC /* absl.framework */,
+				CE71E81C2A5FD64B000C22DC /* RxLibrary.framework */,
+			);
+			path = GrpcFramework;
+			sourceTree = "<group>";
+		};
+		CE71E81D2A5FD64B000C22DC /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E81E2A5FD64B000C22DC /* Firebase */,
+				CE71E82E2A5FD64B000C22DC /* AppsFlyerLib.framework */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		CE71E81E2A5FD64B000C22DC /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E81F2A5FD64B000C22DC /* Firebase.h */,
+				CE71E8202A5FD64B000C22DC /* FirebaseAnalytics */,
+				CE71E82B2A5FD64B000C22DC /* FirebaseMessaging */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CE71E8202A5FD64B000C22DC /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E8212A5FD64B000C22DC /* nanopb.xcframework */,
+				CE71E8222A5FD64B000C22DC /* GoogleAppMeasurementIdentitySupport.xcframework */,
+				CE71E8232A5FD64B000C22DC /* FirebaseAnalytics.xcframework */,
+				CE71E8242A5FD64B000C22DC /* FirebaseAnalyticsSwift.xcframework */,
+				CE71E8252A5FD64B000C22DC /* FirebaseInstallations.xcframework */,
+				CE71E8262A5FD64B000C22DC /* FBLPromises.xcframework */,
+				CE71E8272A5FD64B000C22DC /* FirebaseCore.xcframework */,
+				CE71E8282A5FD64B000C22DC /* FirebaseCoreInternal.xcframework */,
+				CE71E8292A5FD64B000C22DC /* GoogleAppMeasurement.xcframework */,
+				CE71E82A2A5FD64B000C22DC /* GoogleUtilities.xcframework */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		CE71E82B2A5FD64B000C22DC /* FirebaseMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E82C2A5FD64B000C22DC /* FirebaseMessaging.xcframework */,
+				CE71E82D2A5FD64B000C22DC /* GoogleDataTransport.xcframework */,
+			);
+			path = FirebaseMessaging;
+			sourceTree = "<group>";
+		};
+		CE8685672A5E525B0005D913 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E7CC2A5F9558000C22DC /* Language */,
+				CE8685682A5E525B0005D913 /* Images */,
+				CE86856B2A5E525B0005D913 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE8685682A5E525B0005D913 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE8685692A5E525B0005D913 /* ap_logo.png */,
+				CE86856A2A5E525B0005D913 /* bg.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CEAAE9C12A5E49FB00F84535 = {
+			isa = PBXGroup;
+			children = (
+				CEAAE9CC2A5E49FB00F84535 /* NemoSDKDemo */,
+				CEAAE9CB2A5E49FB00F84535 /* Products */,
+				CEAAEAF42A5E4E1600F84535 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEAAE9CB2A5E49FB00F84535 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAE9CA2A5E49FB00F84535 /* NemoSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEAAE9CC2A5E49FB00F84535 /* NemoSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E7D22A5FBB28000C22DC /* Frameworks */,
+				CEAAE9CD2A5E49FB00F84535 /* AppDelegate.h */,
+				CEAAE9CE2A5E49FB00F84535 /* AppDelegate.m */,
+				CEAAEAEB2A5E4B1300F84535 /* Classess */,
+				CEAAE9D02A5E49FB00F84535 /* SceneDelegate.h */,
+				CEAAE9D12A5E49FB00F84535 /* SceneDelegate.m */,
+				CEAAE9D32A5E49FB00F84535 /* ViewController.h */,
+				CEAAE9D42A5E49FB00F84535 /* ViewController.m */,
+				CEAAE9D62A5E49FB00F84535 /* Main.storyboard */,
+				CEAAE9D92A5E49FC00F84535 /* Assets.xcassets */,
+				CEAAE9DB2A5E49FC00F84535 /* LaunchScreen.storyboard */,
+				CEAAE9DE2A5E49FC00F84535 /* Info.plist */,
+				CE8685672A5E525B0005D913 /* Resources */,
+				CEAAE9DF2A5E49FC00F84535 /* main.m */,
+				CE71E80B2A5FBDBE000C22DC /* File.swift */,
+				CE71E80A2A5FBDBD000C22DC /* NemoSDKDemo-Bridging-Header.h */,
+			);
+			path = NemoSDKDemo;
+			sourceTree = "<group>";
+		};
+		CEAAEAEB2A5E4B1300F84535 /* Classess */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAEAEC2A5E4B1300F84535 /* Controller */,
+			);
+			path = Classess;
+			sourceTree = "<group>";
+		};
+		CEAAEAEC2A5E4B1300F84535 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAEAED2A5E4B1300F84535 /* MainViewController.xib */,
+				CEAAEAEE2A5E4B1300F84535 /* MainViewController.m */,
+				CEAAEAEF2A5E4B1300F84535 /* MainViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEAAEAF42A5E4E1600F84535 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E75A2A5E5AF1000C22DC /* MobileCoreServices.framework */,
+				CE71E7582A5E5A7E000C22DC /* AuthenticationServices.framework */,
+				CE71E7552A5E5A79000C22DC /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEAAE9C92A5E49FB00F84535 /* NemoSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAAE9E32A5E49FC00F84535 /* Build configuration list for PBXNativeTarget "NemoSDKDemo" */;
+			buildPhases = (
+				CEAAE9C62A5E49FB00F84535 /* Sources */,
+				CEAAE9C72A5E49FB00F84535 /* Frameworks */,
+				CEAAE9C82A5E49FB00F84535 /* Resources */,
+				CEAAEB112A5E508000F84535 /* CopyFiles */,
+				CE71E84E2A5FD7F6000C22DC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NemoSDKDemo;
+			productName = NemoSDKDemo;
+			productReference = CEAAE9CA2A5E49FB00F84535 /* NemoSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEAAE9C22A5E49FB00F84535 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CEAAE9C92A5E49FB00F84535 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+				};
+			};
+			buildConfigurationList = CEAAE9C52A5E49FB00F84535 /* Build configuration list for PBXProject "NemoSDKDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEAAE9C12A5E49FB00F84535;
+			productRefGroup = CEAAE9CB2A5E49FB00F84535 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEAAE9C92A5E49FB00F84535 /* NemoSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEAAE9C82A5E49FB00F84535 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAAE9DD2A5E49FC00F84535 /* LaunchScreen.storyboard in Resources */,
+				CE71E7D02A5F9558000C22DC /* vi.txt in Resources */,
+				CEAAE9DA2A5E49FC00F84535 /* Assets.xcassets in Resources */,
+				CE8685712A5E525B0005D913 /* ap_logo.png in Resources */,
+				CEAAE9D82A5E49FB00F84535 /* Main.storyboard in Resources */,
+				CE8685722A5E525B0005D913 /* bg.jpg in Resources */,
+				CEAAEAF02A5E4B1300F84535 /* MainViewController.xib in Resources */,
+				CE8685732A5E525B0005D913 /* GoogleService-Info.plist in Resources */,
+				CE71E7CF2A5F9558000C22DC /* en.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEAAE9C62A5E49FB00F84535 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAAE9D52A5E49FB00F84535 /* ViewController.m in Sources */,
+				CE71E80C2A5FBDBE000C22DC /* File.swift in Sources */,
+				CEAAE9CF2A5E49FB00F84535 /* AppDelegate.m in Sources */,
+				CEAAE9E02A5E49FC00F84535 /* main.m in Sources */,
+				CEAAEAF12A5E4B1300F84535 /* MainViewController.m in Sources */,
+				CEAAE9D22A5E49FB00F84535 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEAAE9D62A5E49FB00F84535 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEAAE9D72A5E49FB00F84535 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEAAE9DB2A5E49FC00F84535 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEAAE9DC2A5E49FC00F84535 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEAAE9E12A5E49FC00F84535 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEAAE9E22A5E49FC00F84535 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEAAE9E42A5E49FC00F84535 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = TX8U89X44Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GrpcFramework",
+					"$(PROJECT_DIR)/NemoSDKDemo/Frameworks",
+					"$(PROJECT_DIR)/NemoSDKDemo/Frameworks/GrpcFramework",
+					"$(PROJECT_DIR)/NemoSDKDemo/Frameworks/Tracking",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NemoSDKDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.gosu.devapps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "devapps-trantrongkien";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NemoSDKDemo/NemoSDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEAAE9E52A5E49FC00F84535 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z82853QB93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GrpcFramework",
+					"$(PROJECT_DIR)/NemoSDKDemo/Frameworks",
+					"$(PROJECT_DIR)/NemoSDKDemo/Frameworks/GrpcFramework",
+					"$(PROJECT_DIR)/NemoSDKDemo/Frameworks/Tracking",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NemoSDKDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = playerteam.NemoSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NemoSDKDemo/NemoSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEAAE9C52A5E49FB00F84535 /* Build configuration list for PBXProject "NemoSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAAE9E12A5E49FC00F84535 /* Debug */,
+				CEAAE9E22A5E49FC00F84535 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAAE9E32A5E49FC00F84535 /* Build configuration list for PBXNativeTarget "NemoSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAAE9E42A5E49FC00F84535 /* Debug */,
+				CEAAE9E52A5E49FC00F84535 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEAAE9C22A5E49FB00F84535 /* Project object */;
+}

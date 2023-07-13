@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "90D89690-C3A2-43BE-813F-D71E0841E347"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DEA4334-F3C5-4333-A0E9-AE9E3996D2A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../NemoSDK/NemoSDK/NemoManage/Vendor/AppleIAP/AppleIAP.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
+            landmarkName = "-verifyPayConfirm:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48638336-60BA-4D0E-984E-E8D4A553AF00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NemoSDKDemo/Classess/Controller/MainViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-IAPInitFailed:andErrorCode:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48638336-60BA-4D0E-984E-E8D4A553AF00 - 30c3bd9ab3260662"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MainViewController IAPInitFailed:andErrorCode:]"
+                  moduleName = "NemoSDKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac24/Public/Work/Gosu/IOS-SDK-NEW/NemoSDK/NemoSDKFramework/Factory/SDKDemo/v2.1.0-iap/NemoSDKDemo/Classess/Controller/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "48638336-60BA-4D0E-984E-E8D4A553AF00 - f8139c09b7070cc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49-[MainViewController IAPInitFailed:andErrorCode:]_block_invoke"
+                  moduleName = "NemoSDKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac24/Public/Work/Gosu/IOS-SDK-NEW/NemoSDK/NemoSDKFramework/Factory/SDKDemo/v2.1.0-iap/NemoSDKDemo/Classess/Controller/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
