@@ -1,24 +1,35 @@
-# Nemo iOS SDK (version 2.1.1)
+# Nemo-IAP iOS SDK (version 2.1.1)
 
 **This guide shows you how to integrate your iOS app using the NemoSDK for iOS. The NemoSDK for iOS consists of the following component SDKs:**
-  - [The NemoSDK Core](https://github.com/itcgosucorp/nemosdk-ios/releases)
-  - Nemo OpenId: [AppAuth.framework](https://github.com/itcgosucorp/nemosdk-ios/releases)
-  
+  - [The NemoSDK Core includes in-app purchases](https://github.com/gosusdk/ios-nemosdk_iap_demo/releases)
+  - Nemo OpenId: [AppAuth.framework](https://github.com/gosusdk/ios-nemosdk_iap_demo/releases)
+  - Grpc framework
+  - Appsflyer framework
+  - Firebase framework
 
 #### FEATURES:
   - [Nemo Login: Authenticate people with NemoID credentials.](#integrate-nemosdk)
+  - [Nemo in-app purchase](#integrate-nemosdk-iap)
   - Nemo Tracking: 
     * [Tracking with AppsFlyer](#integrate-nemosdktracking-appsflyer)
     * [Tracking with Firebase](#integrate-nemosdktracking-firebase)
 
 <a name="integrate-nemosdk"></a>
-## Integrate NemoSDK
+## Integrate NemoSDK with in-app purchase
 
 - Embed NemoSDK latest version and Third party framework into your project
 - Some other libraries: 
-  - [AppAuth.framework](https://github.com/itcgosucorp/nemosdk-ios/releases)
+  - AppAuth.framework
+  - absl.framework
+  - grpc.framework
+  - GRPCClient.framework
+  - openssl_grpc.framework
+  - Protobuf.framework
+  - ProtoRPC.framework
+  - RxLibrary.framework
+  - uv.framework
 
-#### 1. Configure NemoSignIn in your project (default info.plist)
+#### 1. Configure NemoSDK in your project (default info.plist)
   ```xml
     <key>CFBundleURLTypes</key>
     <array>
@@ -35,9 +46,14 @@
     <string>openid email phone_number profile offline_access</string>
     <key>Issuer</key>
     <string>[Issuer]</string>
+    <key>GameClientID</key>
+    <string>[GameClientID]</string>
+    <key>SdkSignature</key>
+    <string>[SdkSignature]</string>
   ```
-  - Issuer: The fully qualified issuer URL of the server (example: https://gid-uat.nemoverse.io)
-  - [RedirectURL/EndSessionEndpoint]: URL Schemes (example: nemo.app.demo.app)
+- **Issuer**: The fully qualified issuer URL of the server (example: https://gid-uat.nemoverse.io)
+- **[RedirectURL/EndSessionEndpoint]**: URL Schemes (example: nemo.app.demo.app)
+- **GameClientID, SdkSignature:** will provide for each product
   
 #### 2. AppAuth Framework Embed
 ![photo_2022-11-23_11-38-37](https://user-images.githubusercontent.com/94542020/203470313-a5eed93b-1e10-43cd-bee2-bf95c4bd5768.jpg)
@@ -46,47 +62,82 @@
 ```objectivec
 //AppDelegate.h
 #import "NemoSDK/NemoSDK.h"
-@interface AppDelegate : UIResponder <UIApplicationDelegate, LoginDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 @end
 
 //AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[NemoSDK sharedInstance] sdkInit];
-    [NemoSDK sharedInstance].loginDelegate = self;
     return YES;
 }
-
-#pragma Login Delegate
-
-- (void)onLoginFailure:(NSString *)message {
-    NSLog(@"onLoginFailure = %@", message);
-}
-
-- (void)onLoginSuccess:(NSString *)access_token andIdToken:(NSString *)id_token {
-    NSLog(@"onLoginSuccess = %@ - %@", access_token, id_token);
-}
-
-- (void)onLogoutFailure:(NSString *)message {
-    NSLog(@"onLogoutFailure = %@", message);
-}
-
-- (void)onLogoutSuccess:(NSString *)message {
-    NSLog(@"onLogoutSuccess = %@", message);
-}
 ```
-
-#### 4. Authorization Interface
+#### 4. NemoSDK - Authorization Interface
 ```objectivec
-//return onLoginSuccess/onLoginFailure delegate
-[[NemoSDK sharedInstance] login];
+//MainViewController.m
+#import <NemoSDK/NemoSDK.h>
+@interface MainViewController ()<LoginDelegate,IAPDelegate>
+@end
 
-//return json string
-[[NemoSDK sharedInstance] getUserInfo]
+@implementation MainViewController
+  //return onLoginSuccess/onLoginFailure delegate
+  [[NemoSDK sharedInstance] login];
 
-//use as onLogoutFailure/onLogoutSuccess Delegate
-[[NemoSDK sharedInstance] logout];
+  //return json string
+  [[NemoSDK sharedInstance] getUserInfo]
+
+  //use as onLogoutFailure/onLogoutSuccess Delegate
+  [[NemoSDK sharedInstance] logout];
+
+  #pragma Login Delegate
+
+  - (void)onLoginFailure:(NSString *)message {
+      NSLog(@"onLoginFailure = %@", message);
+  }
+
+  - (void)onLoginSuccess:(NSString *)access_token andIdToken:(NSString *)id_token {
+      NSLog(@"onLoginSuccess = %@ - %@", access_token, id_token);
+  }
+
+  - (void)onLogoutFailure:(NSString *)message {
+      NSLog(@"onLogoutFailure = %@", message);
+  }
+
+  - (void)onLogoutSuccess:(NSString *)message {
+      NSLog(@"onLogoutSuccess = %@", message);
+  }
 ```
+<a name="integrate-nemosdk-iap"></a>
+#### 5. In-app purchase
+```objectivec
+  - (void) call_iap
+  {
+    NSString *productID = @"vn.devapp.pack1";
+    NSString *appleSecret = @"";
+    NSString *orderID = @"";
+    NSString *orderInfo = @"Item 300 gold";
+    NSString *amount = @"22000";
+    NSString *server = @"22";
+    NSString *character = @"Character_Name";
+    NSString *extraInfo = @"Extra_Info";
+    NSString *userInfoString = [[NemoSDK sharedInstance] getUserInfo];
+    NSJSONSerialization *userData = NULL;
+    if([userInfoString length] > 0) {
+        userData = [NSJSONSerialization JSONObjectWithData:[userInfoString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
+    }
+    NSString *username = [userData valueForKey:@"sub"];
+    
+    IAPDataRequest *iapData = [[IAPDataRequest alloc] initWithData:username andOrderId:orderID andOrderInfo:orderInfo andServerID:server andAmount:amount andAppleProductID:productID andAppleShareSecrect:appleSecret andRoleID:character andExtraInfo:extraInfo];
+    
+    [[NemoSDK sharedInstance] showIAP:iapData andMainView:self andIAPDelegate:self];
+  }
+
+  #prama IAP delegate
+  - (void) IAPInitFailed:(NSString *)message andErrorCode:(NSString *)errorCode {}
+  - (void) IAPPurchaseFailed:(NSString *)message andErrorCode:(NSString *)errorCode {}
+  - (void) IAPCompleted:(NSString *)message {}
+```
+
 <a name="integrate-nemosdktracking-appsflyer"></a>
 ## Integrate NemoSDKTracking
 ### I. Tracking with Appsflyer
