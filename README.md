@@ -110,6 +110,11 @@
 <a name="integrate-nemosdk-iap"></a>
 #### 5. In-app purchase
 ```objectivec
+  //MainViewController.m
+  #import <NemoSDK/NemoSDK.h>
+  @interface MainViewController ()<LoginDelegate,IAPDelegate>
+  @end
+  
   - (void) call_iap
   {
     NSString *productID = @"vn.devapp.pack1";
