@@ -36,14 +36,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "48638336-60BA-4D0E-984E-E8D4A553AF00 - 30c3bd9ab3260662"
+                  uuid = "48638336-60BA-4D0E-984E-E8D4A553AF00 - 80d6096484e4beed"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[MainViewController IAPInitFailed:andErrorCode:]"
                   moduleName = "NemoSDKDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac24/Public/Work/Gosu/IOS-SDK-NEW/NemoSDK/NemoSDKFramework/Factory/SDKDemo/v2.1.0-iap/NemoSDKDemo/Classess/Controller/MainViewController.m"
+                  urlString = "file:///Users/mac24/Public/Work/Gosu/IOS-SDK-NEW/NemoSDK/NemoSDKFramework/Git-repository/NemoSDK-IAP/NemoSDKDemo/Classess/Controller/MainViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "95"
@@ -51,14 +51,14 @@
                   offsetFromSymbolStart = "76">
                </Location>
                <Location
-                  uuid = "48638336-60BA-4D0E-984E-E8D4A553AF00 - f8139c09b7070cc8"
+                  uuid = "48638336-60BA-4D0E-984E-E8D4A553AF00 - 480628f780c5b445"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__49-[MainViewController IAPInitFailed:andErrorCode:]_block_invoke"
                   moduleName = "NemoSDKDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac24/Public/Work/Gosu/IOS-SDK-NEW/NemoSDK/NemoSDKFramework/Factory/SDKDemo/v2.1.0-iap/NemoSDKDemo/Classess/Controller/MainViewController.m"
+                  urlString = "file:///Users/mac24/Public/Work/Gosu/IOS-SDK-NEW/NemoSDK/NemoSDKFramework/Git-repository/NemoSDK-IAP/NemoSDKDemo/Classess/Controller/MainViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "96"
