@@ -135,6 +135,16 @@
     IAPDataRequest *iapData = [[IAPDataRequest alloc] initWithData:username andOrderId:orderID andOrderInfo:orderInfo andServerID:server andAmount:amount andAppleProductID:productID andAppleShareSecrect:appleSecret andRoleID:character andExtraInfo:extraInfo];
     
     [[NemoSDK sharedInstance] showIAP:iapData andMainView:self andIAPDelegate:self];
+    /**
+    * OrderID: Partner's order number
+    * OrderInfo: Item description
+    * ServerID: ID of the server
+    * Amount: Price of the item
+    * ProductID: Item code
+    * AppleShareSecrect: Empty
+    * RoleID: ID of the character
+    * ExtraInfo: Additional information that partners can send, which will be sent to the API to add gold after IAP payment.
+    **/
   }
 
   #prama IAP delegate
