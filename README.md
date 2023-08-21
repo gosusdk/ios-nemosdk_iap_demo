@@ -10,9 +10,7 @@
 #### FEATURES:
   - [Nemo Login: Authenticate people with NemoID credentials.](#integrate-nemosdk)
   - [Nemo in-app purchase](#integrate-nemosdk-iap)
-  - Nemo Tracking: 
-    * [Tracking with AppsFlyer](#integrate-nemosdktracking-appsflyer)
-    * [Tracking with Firebase](#integrate-nemosdktracking-firebase)
+  - Nemo Tracking
 
 <a name="integrate-nemosdk"></a>
 ## Integrate NemoSDK with in-app purchase
@@ -28,6 +26,9 @@
   - ProtoRPC.framework
   - RxLibrary.framework
   - uv.framework
+  - Accelerate.framework
+  - AdSupport.framework
+  - AppTrackingTransparency.framework
 
 #### 1. Configure NemoSDK in your project (default info.plist)
   ```xml
@@ -54,7 +55,24 @@
 - **Issuer**: The fully qualified issuer URL of the server (example: https://gid-uat.nemoverse.io)
 - **[RedirectURL/EndSessionEndpoint]**: URL Schemes (example: nemo.app.demo.app)
 - **GameClientID, SdkSignature:** will provide for each product
-  
+### With Facebook IOS SDK version 13 or latest
+  - Create a swift file (arbitrary name), confirm "Create Bridging Header" when prompt appear
+  - Enable Modules (C and Objective-C) set to YES: Target --> Build Settings --> Enable Modules (C and Objective-C)
+
+# Configuration
+- Insert -ObjC -lc++ -lz to “Other Linker Flags ”on Xcode Project: Main target -> build settings -> search "other linker flags"
+- Configure GameClientID into .plist file (default: info.plist)*. IN the <string> tag, key GameClientID will be provided privately via email
+```xml
+<key>GameClientID</key>
+<string>GameClientID</string>
+```
+- Configure GameSdkSignature into .plist file (default: info.plist)*. IN the <string> tag, key GameSdkSignature will be provided privately via email
+```xml
+<key>GameSdkSignature</key>
+<string>GameSDKSignature</string>
+```
+### GRPC Framework Embed
+  ![image](https://user-images.githubusercontent.com/94542020/160530360-23295245-4eb7-4f0b-b04b-cbcfee270a7e.png)
 #### 2. AppAuth Framework Embed
 ![photo_2022-11-23_11-38-37](https://user-images.githubusercontent.com/94542020/203470313-a5eed93b-1e10-43cd-bee2-bf95c4bd5768.jpg)
 
@@ -68,8 +86,12 @@
 //AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NemoSDKTracking GTracking] applicationDelegate:self andApplication:application didFinishLaunchingWithOptions:launchOptions];
     [[NemoSDK sharedInstance] sdkInit];
     return YES;
+}
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [[NemoSDKTracking GTracking] registerForRemoteNotifications:deviceToken];
 }
 ```
 #### 4. NemoSDK - Authorization Interface
@@ -159,74 +181,59 @@
 - Embed NemoSDKTracking latest version and Third party framework into your project
 - Some other libraries: [AppsFlyerLib.framework](https://github.com/itcgosucorp/nemosdk-ios/releases)
 
-##### 1. Configure NemoSignIn in your project (default info.plist)
-```xml    
-    <key>AppsFlyerAppleID</key>
-    <string>0123456789</string>
-    <key>AppsFlyerKey</key>
-    <string>AppsFlyerKey000001111</string>
+##### 1.Configure GTracking in your project (default info.plist)
+- Configure Tracking Usage Description into .plist file (default: info.plist)*.
+```xml
+    <key>AirbAppName</key>
+    <string>sdkgosutest</string>
+    <key>AirbAppToken</key>
+    <string>d878da2af447440385fe9a4fe37b06a0</string>
     <key>NSUserTrackingUsageDescription</key>
     <string>This identifier will be used to deliver personalized ads to you.</string>
-  ```
-##### 2. AppsFlyerLib Framework Linker
-<img width="475" alt="image" src="https://user-images.githubusercontent.com/94542020/207208331-8eb41bd6-a3f2-4f58-b122-700b881951bc.png">
+```
 
-##### 3. Initialize NemoSDKTracking
+##### 2. Initialize NemoSDKTracking
 ```objectivec
 //AppDelegate.m
 #import "NemoSDKTracking/NemoSDKTracking.h"
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    [[NemoSDKTracking sharedInstance] initTracking:application];
-    application.applicationIconBadgeNumber = 0;
-}
-```
-
-##### 4. Function Interface
-```objectivec
-[[NemoSDKTracking AppsFlyer] trackingEventLoginOnAF:@"userId" andAccount:@"account"];
-[[NemoSDKTracking AppsFlyer] trackingEventOnAF:@"event_abc" withValues:@{
-    @"key1": @"account1",
-    @"key2": @"account2"
-}];
-[[NemoSDKTracking AppsFlyer] trackingLevelArchiveEventOnAF:@"userId" andAccount:@"account" andLevel:@"12301"];
-```
-
-<a name="integrate-nemosdktracking-firebase"></a>
-### II. Tracking with Firebase
-- Embed NemoSDKTracking latest version and Third party framework into your project
-- Some other libraries: [Firebase SDK](https://github.com/itcgosucorp/nemosdk-ios/releases)
-
-##### 1. Configure NemoSignIn in your project (default info.plist)
-- Move GoogleService-Info.plist file into the root of your Xcode project. If prompted, select to add the config file to all targets.
-- Insert -ObjC to “Other Linker Flags ”on Xcode Project: Main target -> build settings -> search "other linker flags"
-- Configure Tracking Usage Description into .plist file (default: info.plist)*.
-  Open with source and insert code: 
-  ```xml
-  <key>NSUserTrackingUsageDescription</key>
-  <string>This identifier will be used to deliver personalized ads to you.</string>
-  ```
-  
-##### 2. Firebase Framework Linker
-<img width="473" alt="image" src="https://user-images.githubusercontent.com/94542020/207208287-654585c2-8892-4227-9da0-7176f3ddce81.png">
-
-##### 3. Initialize NemoSDKTracking with Firebase
-```objectivec
 //AppDelegate.m
-#import "NemoSDKTracking/NemoSDKTracking.h"
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //...
-    [[NemoSDKTracking sharedInstance] applicationDelegate:self andApplication:application didFinishLaunchingWithOptions:launchOptions];
+    // Override point for customization after application launch.
+    [[NemoSDKTracking GTracking] applicationDelegate:self andApplication:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [[NemoSDKTracking GTracking] registerForRemoteNotifications:deviceToken];
+}
 ```
 
 ##### 4. Function Interface
 ```objectivec
-[[NemoSDKTracking Firebase] trackingEventOnFirebase:@"eventName" parameters:@{@"eventEventLogKey":@"eventEventLogValue"}];
-[[NemoSDKTracking Firebase] trackingScreenOnFirebase:@"screenName" screenClass:@"screenClass"];
-[[NemoSDKTracking Firebase] setUserPropertiesOnFirebase:@"userValue" forName:@"usernameName"];
+- (void) callGTrackingExample {
+    NSString *sub = @"123456"; //user-id
+    //tracking start trial
+    [[NemoSDKTracking GTracking] showSignInSDK];
+    [[NemoSDKTracking GTracking] trackingSignIn:sub andUsername:sub andEmail:@"email"];
+    [[NemoSDKTracking GTracking] trackingStartTrial:sub];
+    
+    //tracking Turial Completion
+    [[NemoSDKTracking GTracking] trackingTurialCompleted:sub];
+    
+    [[NemoSDKTracking GTracking] trackingEvent:@"level_20"];
+    
+    [[NemoSDKTracking GTracking] trackingEvent:[NSString stringWithFormat:@"level_%d", 20]];
+    
+    [[NemoSDKTracking GTracking] doneNRU:sub andServerId:@"server_id" andRoleId:@"role_id" andRoleName:@"role_name"];
+    
+    [[NemoSDKTracking GTracking] checkout:sub andProductId:@"productId" andAmount:@"22000" andCurrency:@"VND" andUsername:sub];
+    
+    [[NemoSDKTracking GTracking] purchase:sub andProductId:@"productId" andAmount:@"22000" andCurrency:@"VND" andUsername:sub];
+    
+    [[NemoSDKTracking GTracking] trackingEvent:@"level_20" withValues:@{@"customerId": @"12345"}];
+    
+    [[NemoSDKTracking GTracking] trackingEvent:@"user_checkinday_1"];
+}
 ```
 
 By using the NemoSDK for iOS you agree to these terms.
