@@ -102,6 +102,7 @@
 @end
 
 @implementation MainViewController
+  [NemoSDK sharedInstance].loginDelegate = self;
   //return onLoginSuccess/onLoginFailure delegate
   [[NemoSDK sharedInstance] login];
 
