@@ -175,7 +175,17 @@
   - (void) IAPPurchaseFailed:(NSString *)message andErrorCode:(NSString *)errorCode {}
   - (void) IAPCompleted:(NSString *)message {}
 ```
-
+#### 6. Delete Account
+```objectivec
+  ### Check account deletion status
+  if([SdkConfig sharedInstance].delAccountIsOpen) {
+      ## show deletion button
+  }
+  ### Call deletion API
+  [[NemoSDK sharedInstance] deleteAccountAndSuccess:^{
+      NSLog(@"delete account on Success");
+  }];
+```
 <a name="integrate-nemosdktracking-appsflyer"></a>
 ## Integrate NemoSDKTracking
 ### I. Tracking with Appsflyer
